@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "daveramirez.dev",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "version": "0.0.0",
+  "author": "Dave Ramirez <ramirezd42@gmail.com>",
   "dependencies": {
     "gatsby": "^2.3.15",
     "gatsby-image": "^2.0.37",
@@ -13,6 +13,7 @@
     "gatsby-plugin-sharp": "^2.0.32",
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-transformer-sharp": "^2.1.17",
+    "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
