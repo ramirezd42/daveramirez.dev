@@ -1,5 +1,96 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  background: linear-gradient(117.43deg, #69c490 0%, #366194 102.18%);
+  background: var(--brand-gradient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
 }
+
+.row {
+  width: var(--container-width);
+  display: flex;
+  flex-direction: row;
+  margin-bottom: var(--space-xl);
+}
+
+.h1:after,
+.h2:after {
+  content: none;
+}
+
+.h1 {
+  font-weight: bold;
+  font-size: calc(
+    var(--text-xxl) * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
+  margin: 0;
+  margin-top: var(--space-xs);
+  text-transform: none;
+}
+
+.h2 {
+  font-size: calc(
+    var(--text-xxl) * var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
+  margin: 0;
+}
+
+.hr {
+  width: 271px;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.left {
+  width: 33%;
+  flex-grow: 0;
+}
+
+.right {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.buttonContainer {
+  margin-top: var(--space-lg);
+}
+
+.headshot {
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid var(--color-white);
+  margin-bottom: var(--space-lg);
+}
+
+.socialContainer {
+  width: 100%;
+  height: 50px;
+}
+
+.socialContainerInner {
+  display: flex;
+  justify-content: center;
+}
+
+.socialIconWrapper {
+  composes: button from "../styles/button.module.css";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: var(--space-sm);
+  margin-right: var(--space-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+.about {
+  width: 100%;
+  height: 300px;
+  background: turquoise;
+} */

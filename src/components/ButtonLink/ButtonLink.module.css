@@ -1,0 +1,14 @@
+.container {
+  composes: button from "../styles/button.module.css";
+  display: inline-block;
+  width: 350px;
+  padding: var(--space-md);
+  font-family: Raleway;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: none;
+  border-radius: var(--border-radius);
+  border-color: var(--color-white);
+  text-decoration: none;
+}

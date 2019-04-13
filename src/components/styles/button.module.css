@@ -1,0 +1,18 @@
+.button,
+.button > * {
+  transition: all 0.3s;
+}
+
+.button {
+  border: 1px solid var(--color-white);
+}
+
+.button > * {
+  color: var(--color-white);
+}
+
+.button:hover,
+.button:hover > * {
+  border-color: var(--color-light-gray);
+  color: var(--color-light-gray);
+}

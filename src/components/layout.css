@@ -1,1 +1,151 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700|Raleway:300,400");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700|Raleway:300,400,700");
+
+/**
+responsive sizing technique inspired by codyhouse series on creating a design system
+https://medium.com/codyhouse/create-your-design-system-part-1-typography-7c630d9092bd
+https://medium.com/codyhouse/create-your-design-system-part-4-spacing-895c9213e2b9
+
+These need to exist as css variables instead of css module @values because they need
+to change dynamically when --text-base-size is updated (such as via a media query)
+**/
+
+:root {
+  /* Typography Variables */
+  --text-base-size: 1em;
+  --text-scale-ratio: 1.2;
+  --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+  --text-sm: calc(1em / var(--text-scale-ratio));
+  --text-md: calc(1em * var(--text-scale-ratio));
+  --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xl: calc(
+    1em * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio)
+  );
+  --text-xxl: calc(
+    1em * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
+  --text-xxxl: calc(
+    1em * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio)
+  );
+  --heading-line-height: 1.2;
+  --body-line-height: 1.4;
+  --primary-font-family: Raleway;
+  --secondary-font-family: Poppins;
+
+  /* Spacing Variables */
+  --space-unit: 1em;
+  --space-xxs: calc(0.25 * var(--space-unit));
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-sm: calc(0.75 * var(--space-unit));
+  --space-md: calc(1.25 * var(--space-unit));
+  --space-lg: calc(2 * var(--space-unit));
+  --space-xl: calc(3.25 * var(--space-unit));
+  --space-xxl: calc(5.25 * var(--space-unit));
+
+  /* Color Variables */
+  --color-white: #ffffff;
+  --color-light-gray: #d5d5d5;
+  --color-primary: #69c490;
+  --color-secondary: #366194;
+  --brand-gradient: linear-gradient(
+    117.43deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 102.18%
+  );
+
+  /* Layout Variables */
+  --container-width: 970px;
+
+  /* Misc. Variables */
+  --border-radius: 8px;
+}
+
+body {
+  font-size: var(--text-base-size);
+}
+
+/* reset box-sizing to border-box for all elements */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* global typography styles */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-white);
+  margin-bottom: var(--space-xxs);
+  line-height: var(--heading-line-height);
+}
+
+h3,
+h4 {
+  margin-bottom: var(--space-sm);
+}
+
+h1,
+h2 {
+  position: relative;
+  margin-bottom: var(--space-md);
+}
+h1::after,
+h2::after {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  height: 1px;
+  width: 250px;
+  left: 0;
+  background-color: white;
+}
+
+h1 {
+  font-family: var(--primary-font-family);
+  font-weight: normal;
+  font-size: var(--text-xxl);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: var(--primary-font-family);
+  font-weight: normal;
+  font-size: var(--text-xl);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: var(--secondary-font-family);
+  font-weight: bold;
+  font-size: var(--text-lg);
+}
+
+h4 {
+  font-family: var(--secondary-font-family);
+  font-weight: bold;
+  font-size: var(--text-md);
+}
+
+hr {
+  color: var(--color-white);
+  height: 0px;
+  border-top: 1px solid var(--color-white);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+p {
+  font-family: var(--primary-font-family);
+  line-height: var(--body-line-height);
+  color: var(--color-white);
+}
