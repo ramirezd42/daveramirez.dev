@@ -46,7 +46,7 @@ export default () => (
       </div>
     </div>
     <div className={styles.row}>
-      <div>
+      <div className={styles.aboutMe}>
         <h1>About Me</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

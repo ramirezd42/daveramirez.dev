@@ -1,6 +1,6 @@
 .button,
 .button > * {
-  transition: all 0.3s;
+  transition: color 0.3s, border-color 0.3s;
 }
 
 .button {

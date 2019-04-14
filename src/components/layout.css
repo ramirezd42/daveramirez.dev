@@ -63,6 +63,13 @@ to change dynamically when --text-base-size is updated (such as via a media quer
   --border-radius: 8px;
 }
 
+@media screen and (max-width: 1200px) {
+  :root {
+    --text-base-size: 1.25em;
+    --text-scale-ratio: 1.25;
+  }
+}
+
 body {
   font-size: var(--text-base-size);
 }
@@ -96,17 +103,6 @@ h4 {
 h1,
 h2 {
   position: relative;
-  margin-bottom: var(--space-md);
-}
-h1::after,
-h2::after {
-  position: absolute;
-  content: "";
-  bottom: -10px;
-  height: 1px;
-  width: 250px;
-  left: 0;
-  background-color: white;
 }
 
 h1 {
