@@ -7,10 +7,10 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Footer from "./Footer"
+import Footer from "../components/Footer"
 
 import "normalize.css"
-import "./layout.css"
+import "../styles/main.scss"
 
 const Layout = ({ children }) => (
   <>

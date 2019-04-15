@@ -25,6 +25,7 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
+    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,

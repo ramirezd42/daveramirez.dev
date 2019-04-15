@@ -1,3 +1,6 @@
+@import "src/styles/breakpoints";
+@import "src/styles/button";
+
 .container {
   min-height: 100vh;
   width: 100%;
@@ -10,11 +13,14 @@
 }
 
 .row {
+  width: 100%;
   max-width: var(--container-width);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   margin-bottom: var(--space-lg);
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
 }
 
 .h1:after,
@@ -23,6 +29,9 @@
 }
 
 .h1 {
+  font-size: calc(
+    var(--text-xxl) * var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
   font-weight: bold;
   margin: 0;
   margin-top: var(--space-xs);
@@ -30,6 +39,7 @@
 }
 
 .h2 {
+  font-size: var(--text-xxl);
   margin: 0;
 }
 
@@ -46,6 +56,11 @@
 
 .buttonContainer {
   margin-top: var(--space-lg);
+}
+
+.button {
+  @include button;
+  width: 350px;
 }
 
 .headshot {
@@ -65,12 +80,16 @@
   justify-content: center;
 }
 
+.aboutMe {
+  text-align: center;
+}
+
 .socialIconWrapper {
-  composes: button from "../styles/button.module.css";
+  @include hover-styles;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border-width: 2px;
+  border: 2px solid var(--color-white);
   margin-left: var(--space-sm);
   margin-right: var(--space-sm);
   display: flex;
@@ -78,78 +97,36 @@
   align-items: center;
 }
 
-/* TODO: consider making this pattern more repeatable with grid utilities */
-@media screen and (max-width: 599px) {
-  .row {
-    flex-direction: column;
-    width: 100%;
-    padding-left: var(--space-md);
-    padding-right: var(--space-md);
-  }
+@include for-phone-only {
   .left {
     width: 75%;
   }
-
-  .h1 {
-    font-size: calc(var(--text-xxl) * var(--text-scale-ratio));
-  }
-  .h2 {
-    font-size: var(--text-xl);
-  }
-  .aboutMe {
-    text-align: center;
+  .button {
+    width: 100%;
   }
 }
 
-@media screen and (min-width: 600px) {
-  .row {
-    flex-direction: column;
-    width: 100%;
-    padding-left: var(--space-md);
-    padding-right: var(--space-md);
-  }
+@include for-tablet-portrait-up {
   .left {
     width: 50%;
   }
-
-  .h1 {
-    font-size: calc(var(--text-xxl) * var(--text-scale-ratio));
-  }
-  .h2 {
-    font-size: var(--text-xxl);
-  }
-  .aboutMe {
-    text-align: center;
+  .row {
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
   }
 }
 
-@media screen and (min-width: 900px) {
-  .row {
-    flex-direction: row;
-    width: 100%;
-    padding-left: none;
-    padding-right: none;
-  }
+@include for-tablet-landscape-up {
   .left {
     width: 33%;
-    flex-grow: 0;
+  }
+  .row {
+    flex-direction: row;
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
   }
   .aboutMe {
     text-align: left;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .h1 {
-    font-size: calc(
-      var(--text-xxl) * var(--text-scale-ratio) * var(--text-scale-ratio) *
-        var(--text-scale-ratio) * var(--text-scale-ratio)
-    );
-  }
-  .h2 {
-    font-size: calc(
-      var(--text-xxl) * var(--text-scale-ratio) * var(--text-scale-ratio)
-    );
   }
 }
 

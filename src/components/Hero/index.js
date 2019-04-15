@@ -1,7 +1,5 @@
 import React from "react"
-import styles from "./Hero.module.css"
-import ButtonLink from "../ButtonLink/index"
-
+import styles from "./Hero.module.scss"
 import headshot from "../../images/headshot.png"
 import TwitterIcon from "react-feather/dist/icons/twitter"
 import GitHubIcon from "react-feather/dist/icons/github"
@@ -11,7 +9,7 @@ export default () => (
   <div className={styles.container}>
     <div className={styles.row}>
       <div className={styles.left}>
-        <img className={styles.headshot} src={headshot} />
+        <img className={styles.headshot} src={headshot} alt="headshot" />
         <div className={styles.socialContainer}>
           <div className={styles.socialContainerInner}>
             <a
@@ -41,7 +39,9 @@ export default () => (
         <h2 className={styles.h2}>Fullstack Engineer</h2>
         <h2 className={styles.h2}>Lorem Ipmsum Guru</h2>
         <div className={styles.buttonContainer}>
-          <ButtonLink href="https://google.com">Contact Me</ButtonLink>
+          <a className={styles.button} href="https://google.com">
+            Contact Me
+          </a>
         </div>
       </div>
     </div>
