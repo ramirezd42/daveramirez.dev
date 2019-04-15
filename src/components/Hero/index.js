@@ -14,18 +14,21 @@ export default () => (
           <div className={styles.socialContainerInner}>
             <a
               href="https://twitter.com/daveramirez"
+              aria-label="View my twitter page"
               className={styles.socialIconWrapper}
             >
               <TwitterIcon className={styles.socialIcon} />
             </a>
             <a
               href="https://github.com/ramirezd42"
+              aria-label="View my GitHub page"
               className={styles.socialIconWrapper}
             >
               <GitHubIcon className={styles.socialIcon} />
             </a>
             <a
               href="https://linkedin.com/in/dave-ramirez/"
+              aria-label="View my linkedin page"
               className={styles.socialIconWrapper}
             >
               <LinkedInIcon className={styles.socialIcon} />
