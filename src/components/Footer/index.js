@@ -1,20 +1,46 @@
 import React from "react"
-import styles from "./Footer.module.css"
+import styles from "./Footer.module.scss"
+import TwitterIcon from "react-feather/dist/icons/twitter"
+import GitHubIcon from "react-feather/dist/icons/github"
+import LinkedInIcon from "react-feather/dist/icons/linkedin"
+import config from "../../config"
 
 export default () => (
   <footer className={styles.container}>
-    <h1>Header 1</h1>
-    <h2>Header 2</h2>
-    <h3>Header 3</h3>
-    <h4>Header 4</h4>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </p>
+    <div className={styles.row}>
+      <div className={styles.left}>
+        <a className={styles.button} href="#">
+          Contact Me
+        </a>
+      </div>
+      <div className={styles.right}>
+        <a className={styles.socialSection} href={config.twitterUrl}>
+          <a className={styles.socialButton} href={config.twitterUrl}>
+            <TwitterIcon className={styles.socialIcon} />
+          </a>
+          <a className={styles.socialLink} href={config.twitterUrl}>
+            @daveramirez
+          </a>
+        </a>
+        <div className={styles.separator} />
+        <a className={styles.socialSection} href={config.githubUrl}>
+          <a className={styles.socialButton} href={config.githubUrl}>
+            <GitHubIcon className={styles.socialIcon} />
+          </a>
+          <a className={styles.socialLink} href={config.githubUrl}>
+            /ramirezd42
+          </a>
+        </a>
+        <div className={styles.separator} />
+        <a className={styles.socialSection} href={config.twitterUrl}>
+          <a className={styles.socialButton} href={config.twitterUrl}>
+            <LinkedInIcon className={styles.socialIcon} />
+          </a>
+          <a className={styles.socialLink} href={config.twitterUrl}>
+            /dave-ramirez
+          </a>
+        </a>
+      </div>
+    </div>
   </footer>
 )

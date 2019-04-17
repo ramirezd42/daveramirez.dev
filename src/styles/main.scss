@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700|Raleway:300,400,700");
 @import "breakpoints";
+@import "button";
 
 /**
 responsive sizing technique inspired by codyhouse series on creating a design system
@@ -145,4 +146,10 @@ p {
   font-family: var(--primary-font-family);
   line-height: var(--body-line-height);
   color: var(--color-white);
+}
+
+a {
+  @include hover-styles;
+  font-family: var(--primary-font-family);
+  text-decoration: none;
 }

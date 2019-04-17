@@ -1,5 +1,6 @@
 @import "src/styles/breakpoints";
 @import "src/styles/button";
+@import "src/styles/row";
 
 .container {
   min-height: 100vh;
@@ -13,14 +14,12 @@
 }
 
 .row {
-  width: 100%;
-  max-width: var(--container-width);
-  display: flex;
+  @include row;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: var(--space-lg);
-  padding-left: var(--space-md);
-  padding-right: var(--space-md);
+
+  @include for-tablet-landscape-up {
+    flex-direction: row;
+  }
 }
 
 .h1:after,
@@ -85,16 +84,7 @@
 }
 
 .socialIconWrapper {
-  @include hover-styles;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid var(--color-white);
-  margin-left: var(--space-sm);
-  margin-right: var(--space-sm);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include social-button(50px);
 }
 
 @include for-phone-only {
@@ -110,20 +100,11 @@
   .left {
     width: 50%;
   }
-  .row {
-    padding-left: var(--space-xl);
-    padding-right: var(--space-xl);
-  }
 }
 
 @include for-tablet-landscape-up {
   .left {
     width: 33%;
-  }
-  .row {
-    flex-direction: row;
-    padding-left: var(--space-sm);
-    padding-right: var(--space-sm);
   }
   .aboutMe {
     text-align: left;

@@ -4,6 +4,7 @@ import headshot from "../../images/headshot.png"
 import TwitterIcon from "react-feather/dist/icons/twitter"
 import GitHubIcon from "react-feather/dist/icons/github"
 import LinkedInIcon from "react-feather/dist/icons/linkedin"
+import config from "../../config"
 
 export default () => (
   <div className={styles.container}>
@@ -13,21 +14,21 @@ export default () => (
         <div className={styles.socialContainer}>
           <div className={styles.socialContainerInner}>
             <a
-              href="https://twitter.com/daveramirez"
+              href={config.twitterUrl}
               aria-label="View my twitter page"
               className={styles.socialIconWrapper}
             >
               <TwitterIcon className={styles.socialIcon} />
             </a>
             <a
-              href="https://github.com/ramirezd42"
+              href={config.githubUrl}
               aria-label="View my GitHub page"
               className={styles.socialIconWrapper}
             >
               <GitHubIcon className={styles.socialIcon} />
             </a>
             <a
-              href="https://linkedin.com/in/dave-ramirez/"
+              href={config.linkedInUrl}
               aria-label="View my linkedin page"
               className={styles.socialIconWrapper}
             >

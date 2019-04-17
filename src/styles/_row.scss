@@ -1,0 +1,21 @@
+@import "src/styles/breakpoints";
+
+@mixin row {
+  width: 100%;
+  max-width: var(--container-width);
+  display: flex;
+  margin-bottom: var(--space-lg);
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+  align-items: center;
+
+  @include for-tablet-portrait-up {
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+  }
+
+  @include for-tablet-landscape-up {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+}
