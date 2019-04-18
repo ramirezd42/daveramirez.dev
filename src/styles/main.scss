@@ -48,6 +48,7 @@ to change dynamically when --text-base-size is updated (such as via a media quer
   --space-xxl: calc(5.25 * var(--space-unit));
 
   /* Color Variables */
+  --color-black: #000000;
   --color-white: #ffffff;
   --color-light-gray: #d5d5d5;
   --color-primary: #69c490;
@@ -92,7 +93,6 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--color-white);
   margin-bottom: var(--space-xxs);
   line-height: var(--heading-line-height);
 }
@@ -145,7 +145,6 @@ hr {
 p {
   font-family: var(--primary-font-family);
   line-height: var(--body-line-height);
-  color: var(--color-white);
 }
 
 a {

@@ -1,6 +1,7 @@
 @import "src/styles/breakpoints";
 @import "src/styles/button";
 @import "src/styles/row";
+@import "src/styles/theme";
 
 .container {
   min-height: 100vh;
@@ -28,6 +29,7 @@
 }
 
 .h1 {
+  @include text-theme("dark");
   font-size: calc(
     var(--text-xxl) * var(--text-scale-ratio) * var(--text-scale-ratio)
   );
@@ -38,6 +40,7 @@
 }
 
 .h2 {
+  @include text-theme("dark");
   font-size: var(--text-xxl);
   margin: 0;
 }
@@ -81,6 +84,10 @@
 
 .aboutMe {
   text-align: center;
+  h1,
+  p {
+    @include text-theme("dark");
+  }
 }
 
 .socialIconWrapper {

@@ -1,0 +1,9 @@
+@import "src/styles/breakpoints";
+
+@mixin text-theme($theme) {
+  @if ($theme == "light") {
+    color: var(--color-black);
+  } @else {
+    color: var(--color-white);
+  }
+}
