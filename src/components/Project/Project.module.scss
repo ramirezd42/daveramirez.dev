@@ -1,4 +1,5 @@
 @import "src/styles/breakpoints";
+@import "src/styles/theme";
 
 .container {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
@@ -12,8 +13,40 @@
 
   p {
     font-size: var(--text-sm);
+    @include text-theme("light");
   }
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
   margin-left: var(--space-sm);
   margin-right: var(--space-sm);
+  cursor: pointer;
+}
+
+.header {
+  background: var(--brand-gradient);
+  margin-left: calc(-1 * var(--space-sm));
+  margin-right: calc(-1 * var(--space-sm));
+  margin-top: calc(-1 * var(--space-sm));
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  padding: var(--space-xxs) var(--space-sm);
+  display: flex;
+  align-items: center;
+  h3 {
+    margin: 0px;
+    @include text-theme("dark");
+  }
+}
+
+.logoContainer {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-white);
+  margin: calc(-1 * var(--space-md)) 0px;
+  margin-right: var(--space-md);
+  border: 1px solid var(--color-primary);
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  padding: var(--space-xs);
 }
