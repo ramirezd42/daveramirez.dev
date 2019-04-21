@@ -6,7 +6,11 @@ export default ({ title, children, logoSrc, projectLink }) => {
     <a className={styles.container} href={projectLink}>
       <div className={styles.header}>
         <div className={styles.logoContainer}>
-          <img className={styles.logo} src={logoSrc} />
+          <img
+            className={styles.logo}
+            src={logoSrc}
+            alt={`logo for ${title}`}
+          />
         </div>
         <h3 className={styles.h3}>{title}</h3>
       </div>

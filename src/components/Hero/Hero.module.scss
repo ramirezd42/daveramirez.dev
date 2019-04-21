@@ -2,16 +2,21 @@
 @import "src/styles/button";
 @import "src/styles/row";
 @import "src/styles/theme";
+@import "src/styles/fancy_underline";
+
+.section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
 
 .container {
-  min-height: 100vh;
   width: 100%;
   background: var(--brand-gradient);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: var(--space-lg);
-  padding-bottom: var(--space-lg);
 }
 
 .row {
@@ -31,17 +36,18 @@
 .h1 {
   @include text-theme("dark");
   font-size: calc(
-    var(--text-xxl) * var(--text-scale-ratio) * var(--text-scale-ratio)
+    var(--text-xxl) * var(--text-scale-ratio) * var(--text-scale-ratio) *
+      var(--text-scale-ratio)
   );
   font-weight: bold;
   margin: 0;
-  margin-top: var(--space-xs);
   text-transform: none;
 }
 
 .h2 {
   @include text-theme("dark");
-  font-size: var(--text-xxl);
+  font-size: calc(var(--text-xxl) * var(--text-scale-ratio));
+  font-weight: lighter;
   margin: 0;
 }
 
@@ -83,8 +89,10 @@
 }
 
 .aboutMe {
-  text-align: center;
-  h1,
+  h2 {
+    @include fancy-underline(var(--color-white));
+  }
+  h2,
   p {
     @include text-theme("dark");
   }
@@ -111,13 +119,30 @@
 
 @include for-tablet-landscape-up {
   .left {
-    width: 33%;
+    width: 30%;
   }
   .aboutMe {
     text-align: left;
   }
 }
 
+.circle1 {
+  position: absolute;
+  top: -60%;
+  left: -45%;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.circle2 {
+  position: absolute;
+  bottom: -20%;
+  right: -35%;
+  width: 66%;
+  height: 66%;
+  opacity: 0.5;
+}
 /* 
 .about {
   width: 100%;

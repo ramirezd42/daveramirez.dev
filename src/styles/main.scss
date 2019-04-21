@@ -68,8 +68,8 @@ to change dynamically when --text-base-size is updated (such as via a media quer
 
 @include for-tablet-landscape-up {
   :root {
-    --text-base-size: 1.25em;
-    --text-scale-ratio: 1.25;
+    --text-base-size: 1.2em;
+    --text-scale-ratio: 1.2;
   }
 }
 
@@ -129,7 +129,7 @@ h3 {
 
 h4 {
   font-family: var(--secondary-font-family);
-  font-weight: bold;
+  font-weight: normal;
   font-size: var(--text-md);
 }
 

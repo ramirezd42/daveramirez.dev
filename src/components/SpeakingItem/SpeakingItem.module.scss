@@ -1,0 +1,21 @@
+@import "src/styles/breakpoints";
+@import "src/styles/row";
+@import "src/styles/theme";
+@import "src/styles/button";
+
+.container {
+  flex-direction: column;
+  width: 100%;
+
+  margin-bottom: var(--space-lg);
+  h3 {
+    @include text-theme("dark");
+  }
+
+  a {
+    @include text-theme("dark");
+    @include hover-styles;
+    text-decoration: underline;
+    margin-right: var(--space-sm);
+  }
+}

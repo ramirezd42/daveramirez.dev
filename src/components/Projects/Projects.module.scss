@@ -1,6 +1,7 @@
 @import "src/styles/breakpoints";
 @import "src/styles/row";
 @import "src/styles/theme";
+@import "src/styles/fancy_underline";
 
 .container {
   width: 100%;
@@ -22,6 +23,10 @@
   @include text-theme("light");
 }
 
+.h2 {
+  @include fancy-underline(var(--color-primary));
+}
+
 .p {
   margin-bottom: var(--space-lg);
 }
@@ -32,8 +37,4 @@
   flex-direction: column;
   margin-left: calc(-1 * var(--space-sm));
   margin-right: calc(-1 * var(--space-sm));
-  margin-bottom: var(--space-md);
-  @include for-tablet-landscape-up {
-    flex-direction: row;
-  }
 }

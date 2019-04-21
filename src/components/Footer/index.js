@@ -9,7 +9,7 @@ export default () => (
   <footer className={styles.container}>
     <div className={styles.row}>
       <div className={styles.left}>
-        <a className={styles.button} href="#">
+        <a className={styles.button} href="https://google.com">
           Contact Me
         </a>
       </div>
