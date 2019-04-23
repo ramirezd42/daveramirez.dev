@@ -5,7 +5,7 @@ import vstJsLogo from "../../images/vstjs-logo.png"
 import nodeAudioLogo from "../../images/node-audio-logo.png"
 
 export default () => (
-  <div className={styles.container}>
+  <div className={styles.container} id="projects">
     <div className={styles.row}>
       <h2 className={styles.h2}>Projects</h2>
       <p className={styles.p}>

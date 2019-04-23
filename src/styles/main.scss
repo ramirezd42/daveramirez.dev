@@ -51,6 +51,7 @@ to change dynamically when --text-base-size is updated (such as via a media quer
   --color-black: #000000;
   --color-white: #ffffff;
   --color-light-gray: #d5d5d5;
+  --color-dark-gray: #555555;
   --color-primary: #69c490;
   --color-secondary: #366194;
   --brand-gradient: linear-gradient(
@@ -151,4 +152,8 @@ a {
   @include hover-styles;
   font-family: var(--primary-font-family);
   text-decoration: none;
+}
+
+.head-section {
+  background: var(--brand-gradient);
 }
