@@ -15,30 +15,24 @@ export default () => (
       </div>
       <div className={styles.right}>
         <a className={styles.socialSection} href={config.twitterUrl}>
-          <a className={styles.socialButton} href={config.twitterUrl}>
+          <div className={styles.socialButton}>
             <TwitterIcon className={styles.socialIcon} />
-          </a>
-          <a className={styles.socialLink} href={config.twitterUrl}>
-            @daveramirez
-          </a>
+          </div>
+          <div className={styles.socialLink}>@daveramirez</div>
         </a>
         <div className={styles.separator} />
         <a className={styles.socialSection} href={config.githubUrl}>
-          <a className={styles.socialButton} href={config.githubUrl}>
+          <div className={styles.socialButton}>
             <GitHubIcon className={styles.socialIcon} />
-          </a>
-          <a className={styles.socialLink} href={config.githubUrl}>
-            /ramirezd42
-          </a>
+          </div>
+          <div className={styles.socialLink}>/ramirezd42</div>
         </a>
         <div className={styles.separator} />
-        <a className={styles.socialSection} href={config.twitterUrl}>
-          <a className={styles.socialButton} href={config.twitterUrl}>
+        <a className={styles.socialSection} href={config.linkedInUrl}>
+          <div className={styles.socialButton}>
             <LinkedInIcon className={styles.socialIcon} />
-          </a>
-          <a className={styles.socialLink} href={config.twitterUrl}>
-            /dave-ramirez
-          </a>
+          </div>
+          <div className={styles.socialLink}>/dave-ramirez</div>
         </a>
       </div>
     </div>
