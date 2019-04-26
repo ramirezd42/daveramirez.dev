@@ -14,10 +14,6 @@
     justify-content: flex-end;
   }
 
-  @include for-phone-only {
-    display: none;
-  }
-
   a {
     @include text-theme("dark");
     cursor: pointer;
@@ -50,15 +46,6 @@
 
   @include for-phone-only {
     display: flex;
-    &.visible {
-      top: unset;
-      bottom: 0px;
-    }
-
-    &.hidden {
-      top: unset;
-      bottom: 0px;
-    }
   }
 }
 
