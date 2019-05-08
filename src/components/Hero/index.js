@@ -6,7 +6,7 @@ import GitHubIcon from "react-feather/dist/icons/github"
 import LinkedInIcon from "react-feather/dist/icons/linkedin"
 import config from "../../config"
 
-export default () => (
+export default ({ showContactForm }) => (
   <div className={styles.container}>
     <div className={styles.row}>
       <div className={styles.left}>
@@ -43,9 +43,9 @@ export default () => (
         <h2 className={styles.h2}>Fullstack Engineer</h2>
         <h2 className={styles.h2}>Lorem Ipmsum Guru</h2>
         <div className={styles.buttonContainer}>
-          <a className={styles.button} href="https://google.com">
+          <button className={styles.button} onClick={showContactForm}>
             Contact Me
-          </a>
+          </button>
         </div>
       </div>
     </div>

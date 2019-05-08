@@ -5,13 +5,13 @@ import GitHubIcon from "react-feather/dist/icons/github"
 import LinkedInIcon from "react-feather/dist/icons/linkedin"
 import config from "../../config"
 
-export default () => (
+export default ({ showContactForm }) => (
   <footer className={styles.container}>
     <div className={styles.row}>
       <div className={styles.left}>
-        <a className={styles.button} href="https://google.com">
+        <button className={styles.button} onClick={showContactForm}>
           Contact Me
-        </a>
+        </button>
       </div>
       <div className={styles.right}>
         <a className={styles.socialSection} href={config.twitterUrl}>

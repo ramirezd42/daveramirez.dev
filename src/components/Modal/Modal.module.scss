@@ -1,0 +1,17 @@
+@import "src/styles/breakpoints";
+@import "src/styles/button";
+
+.container {
+  .inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: var(--space-md);
+  }
+  .closeButton {
+    @include hover-styles("light");
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-md);
+  }
+}

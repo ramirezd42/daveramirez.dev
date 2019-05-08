@@ -6,7 +6,7 @@ import MicIcon from "react-feather/dist/icons/mic"
 import styles from "./Nav.module.scss"
 
 const NavLink = props => (
-  <Link className={styles.link} smooth duration="200" {...props} />
+  <Link className={styles.link} smooth duration="400" {...props} />
 )
 
 const Links = () => (
@@ -29,12 +29,12 @@ export const Nav = props => (
   </div>
 )
 
-export const FloatingNav = props => {
+export const FloatingNav = ({ visible, ...restProps }) => {
   const className = `${styles.floatingContainer} ${
-    props.visible ? styles.visible : styles.hidden
+    visible ? styles.visible : styles.hidden
   }`
   return (
-    <div className={className} {...props}>
+    <div className={className} {...restProps}>
       <Links />
     </div>
   )

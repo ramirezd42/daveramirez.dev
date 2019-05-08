@@ -1,6 +1,7 @@
 @mixin hover-styles($theme: "dark") {
   $color: var(--color-white);
   $hover-color: var(--color-light-gray);
+  cursor: pointer;
 
   @if ($theme == "light") {
     $color: var(--color-black);

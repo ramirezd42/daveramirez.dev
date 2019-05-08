@@ -8,18 +8,32 @@
 import React, { useState } from "react"
 import { Waypoint } from "react-waypoint"
 import PropTypes from "prop-types"
-import Footer from "../components/Footer"
 import { Nav, FloatingNav } from "../components/Nav"
+import { ToastContainer } from "react-toastify"
+import { X } from "react-feather"
 
 import "normalize.css"
 import "../styles/main.scss"
+import "react-toastify/dist/ReactToastify.css"
 
+// Tell react-modal the root element to support accessibility
+import Modal from "react-modal"
+Modal.setAppElement("#___gatsby")
+
+const CloseToastButton = () => (
+  <X width={15} height={15} className="Toastify__close-button" />
+)
 const Layout = ({ children }) => {
   const [showFloatingNav, setShowFloatingNav] = useState(false)
   return (
     <>
       <div id="about-me">
         <div className="head-section">
+          <ToastContainer
+            className="toast-container"
+            closeButton={<CloseToastButton />}
+            autoClose={3000}
+          />
           <Nav />
           <FloatingNav visible={showFloatingNav} />
           <Waypoint
@@ -28,7 +42,6 @@ const Layout = ({ children }) => {
           />
           <main>{children}</main>
         </div>
-        <Footer />
       </div>
     </>
   )
