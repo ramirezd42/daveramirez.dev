@@ -7,6 +7,13 @@
   display: flex;
   z-index: 1;
   padding: var(--space-sm);
+  @include for-phone-only {
+    justify-content: space-around;
+    padding: var(--space-sm) var(--space-xs);
+  }
+  @include for-silly-tiny-phones-only {
+    font-size: var(--text-sm);
+  }
   width: 100%;
 
   justify-content: center;
@@ -51,10 +58,18 @@
 
 .icon {
   margin-right: var(--space-sm);
+
+  @include for-phone-only {
+    margin-right: var(--space-xs);
+  }
 }
 
 .link {
   display: flex;
   align-items: center;
   margin-right: var(--space-md);
+
+  @include for-phone-only {
+    margin-right: var(--space-sm);
+  }
 }

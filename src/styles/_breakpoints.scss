@@ -1,3 +1,8 @@
+@mixin for-silly-tiny-phones-only {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
 @mixin for-phone-only {
   @media (max-width: 599px) {
     @content;
