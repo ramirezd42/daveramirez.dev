@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700|Raleway:300,400,700");
 @import "breakpoints";
-@import "button";
+@import "theme";
 
 /**
 responsive sizing technique inspired by codyhouse series on creating a design system
@@ -151,7 +151,7 @@ p {
 }
 
 a {
-  @include hover-styles;
+  @include link-theme("dark");
   font-family: var(--primary-font-family);
   text-decoration: none;
 }
@@ -199,6 +199,10 @@ body.ReactModal__Body--open {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+  }
+
+  @include for-desktop-up {
+    width: 33%;
   }
 
   margin-left: var(--space-md);

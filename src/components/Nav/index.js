@@ -30,7 +30,7 @@ export const Nav = props => (
 )
 
 export const FloatingNav = ({ visible, ...restProps }) => {
-  const className = `${styles.floatingContainer} ${
+  const className = `${styles.container} ${styles.floating} ${
     visible ? styles.visible : styles.hidden
   }`
   return (

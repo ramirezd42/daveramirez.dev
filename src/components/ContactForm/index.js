@@ -4,7 +4,8 @@ import axios from "axios"
 import styles from "./ContactForm.module.scss"
 import loadingImage from "../../images/loading.svg"
 import AlertCircle from "react-feather/dist/icons/alert-circle"
-import Modal from "../Modal"
+import Modal from "../atoms/Modal"
+import { Submit } from "../Button"
 
 const honeyPotField = "realFieldPlzUse"
 
@@ -120,7 +121,12 @@ export default class ContactForm extends React.Component {
                 <img alt="form loading" src={loadingImage} />
               </div>
             ) : (
-              <input type="submit" disabled={isLoading || !isValid(formData)} />
+              <Submit
+                block
+                theme="light"
+                disabled={isLoading || !isValid(formData)}
+                className={styles.submit}
+              />
             )}
           </form>
         </div>

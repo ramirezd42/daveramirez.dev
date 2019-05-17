@@ -7,3 +7,32 @@
     color: var(--color-white);
   }
 }
+
+@mixin link-theme($theme) {
+  $color: var(--color-white);
+  $hover-color: var(--color-light-gray);
+
+  @if ($theme == "light") {
+    $color: var(--color-black);
+    $hover-color: var(--color-dark-gray);
+  }
+
+  transition: color 0.3s, border-color 0.3s;
+  cursor: pointer;
+
+  color: $color;
+  border-color: $color;
+  & > * {
+    color: $color;
+    border-color: $color;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  &:hover {
+    border-color: $hover-color;
+    color: $hover-color;
+    & > * {
+      border-color: $hover-color;
+      color: $hover-color;
+    }
+  }
+}

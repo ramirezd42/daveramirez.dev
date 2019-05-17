@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./Speaking.module.scss"
-import SpeakingItem from "../SpeakingItem"
+import SpeakingItem from "./SpeakingItem"
 
 export default () => (
   <div className={styles.container} id="speaking">

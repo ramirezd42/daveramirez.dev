@@ -1,6 +1,5 @@
 @import "src/styles/theme";
 @import "src/styles/breakpoints";
-@import "src/styles/button";
 
 .container {
   left: 0;
@@ -30,8 +29,7 @@
   }
 }
 
-.floatingContainer {
-  composes: container;
+.floating {
   position: fixed;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
   top: 0;
@@ -39,7 +37,7 @@
 
   a {
     @include text-theme("light");
-    @include hover-styles("light");
+    @include link-theme("light");
   }
 
   transition: top 0.2s;

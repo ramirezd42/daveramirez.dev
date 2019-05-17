@@ -1,4 +1,3 @@
-@import "src/styles/button";
 @import "src/styles/breakpoints";
 @import "src/styles/row";
 
@@ -38,10 +37,6 @@
 }
 
 .button {
-  @include button;
-  font-size: var(--text-sm);
-  width: 150px;
-
   @include for-phone-only {
     width: 100%;
     margin-bottom: var(--space-md);
@@ -52,10 +47,6 @@
   color: var(--color-white);
   display: flex;
   align-items: center;
-  // TODO: dont reference border color directly
-  &:hover > .socialButton {
-    border-color: var(--color-light-gray);
-  }
 
   @include for-phone-only {
     margin-bottom: var(--space-sm);
@@ -84,7 +75,6 @@
   }
 }
 
-.socialButton {
-  @include social-button(32px);
-  margin-left: 0px;
+.socialIcon {
+  margin-right: var(--space-sm);
 }

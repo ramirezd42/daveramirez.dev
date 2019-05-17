@@ -1,5 +1,5 @@
 @import "src/styles/breakpoints";
-@import "src/styles/button";
+@import "src/styles/theme";
 
 .container {
   .inner {
@@ -9,7 +9,7 @@
     padding: var(--space-md);
   }
   .closeButton {
-    @include hover-styles("light");
+    @include link-theme("light");
     position: absolute;
     top: var(--space-sm);
     right: var(--space-md);

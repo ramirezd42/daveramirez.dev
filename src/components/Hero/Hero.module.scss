@@ -1,5 +1,4 @@
 @import "src/styles/breakpoints";
-@import "src/styles/button";
 @import "src/styles/row";
 @import "src/styles/theme";
 @import "src/styles/fancy_underline";
@@ -69,11 +68,6 @@
   margin-top: var(--space-lg);
 }
 
-.button {
-  @include button;
-  width: 350px;
-}
-
 .headshot {
   width: 100%;
   border-radius: 50%;
@@ -81,15 +75,19 @@
   margin-bottom: var(--space-lg);
 }
 
-.socialContainer {
-  width: 100%;
-  height: 50px;
-  margin-bottom: var(--space-lg);
-}
-
-.socialContainerInner {
+.socialLinks {
   display: flex;
+  width: 100%;
   justify-content: center;
+  margin-bottom: var(--space-lg);
+
+  & > * {
+    margin-left: var(--space-sm);
+    margin-right: var(--space-sm);
+  }
+  @include for-tablet-landscape-up {
+    margin-bottom: 0px;
+  }
 }
 
 .aboutMe {
@@ -100,10 +98,6 @@
   p {
     @include text-theme("dark");
   }
-}
-
-.socialIconWrapper {
-  @include social-button(50px);
 }
 
 @include for-phone-only {

@@ -1,4 +1,3 @@
-@import "src/styles/button";
 @import "src/styles/breakpoints";
 
 .container {
@@ -30,26 +29,8 @@
     height: 200px;
   }
 
-  input[type="submit"] {
-    height: calc(var(--text-base-size) + (var(--space-sm) * 2));
-    background: var(--color-primary);
-    transition: background 0.3s;
-    &:hover {
-      background: var(--color-primary-dark);
-    }
-    cursor: pointer;
-    padding: var(--space-sm);
-    font-family: var(--primary-font-family);
+  .submit {
     margin-bottom: var(--space-md);
-    border-radius: var(--border-radius);
-    border: none;
-    color: var(--color-white);
-    text-transform: uppercase;
-    &:disabled {
-      background: var(--color-light-gray);
-      color: var(--color-white);
-      cursor: not-allowed;
-    }
   }
 
   .loadingIndicator {
