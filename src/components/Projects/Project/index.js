@@ -1,5 +1,6 @@
 import React from "react"
 import styles from "./Project.module.scss"
+import { P } from "../../atoms"
 
 export default ({ title, children, logoSrc, projectLink }) => {
   return (
@@ -14,7 +15,7 @@ export default ({ title, children, logoSrc, projectLink }) => {
         </div>
         <h3 className={styles.h3}>{title}</h3>
       </div>
-      <p className={styles.p}>{children}</p>
+      <P>{children}</P>
     </a>
   )
 }

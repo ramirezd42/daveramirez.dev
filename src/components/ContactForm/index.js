@@ -5,6 +5,7 @@ import styles from "./ContactForm.module.scss"
 import loadingImage from "../../images/loading.svg"
 import AlertCircle from "react-feather/dist/icons/alert-circle"
 import Modal from "../atoms/Modal"
+import { P } from "../atoms/Typography"
 import { Submit } from "../Button"
 
 const honeyPotField = "realFieldPlzUse"
@@ -113,7 +114,7 @@ export default class ContactForm extends React.Component {
             {error && (
               <div className={styles.errorMessage}>
                 <AlertCircle />
-                <p>{error}</p>
+                <P>{error}</P>
               </div>
             )}
             {isLoading ? (

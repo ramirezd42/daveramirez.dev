@@ -1,5 +1,6 @@
 import React from "react"
 import styles from "./SpeakingItem.module.scss"
+import { P } from "../../atoms/Typography"
 
 export default () => {
   return (
@@ -8,7 +9,7 @@ export default () => {
         LibertyJS <span>OCT 2018</span>
       </h3>
       <h4>Embracing the Native of React Native</h4>
-      <p>
+      <P>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -16,7 +17,7 @@ export default () => {
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
-      </p>
+      </P>
       <a href="https://google.com">Slides</a>
       <a href="https://google.com">Website</a>
     </div>

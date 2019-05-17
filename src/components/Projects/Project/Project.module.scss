@@ -10,10 +10,6 @@
     font-size: var(--text-md);
   }
 
-  p {
-    @include text-theme("light");
-  }
-
   margin-bottom: var(--space-lg);
   margin-left: var(--space-sm);
   margin-right: var(--space-sm);

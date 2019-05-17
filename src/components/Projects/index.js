@@ -3,13 +3,14 @@ import styles from "./Projects.module.scss"
 import Project from "../Project"
 import vstJsLogo from "../../images/vstjs-logo.png"
 import nodeAudioLogo from "../../images/node-audio-logo.png"
+import { P } from "../atoms/Typography"
 
 export default () => {
   return (
     <div className={styles.container} id="projects">
       <div className={styles.row}>
         <h2 className={styles.h2}>Projects</h2>
-        <p className={styles.p}>
+        <P className={styles.p}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -17,7 +18,7 @@ export default () => {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        </P>
         <div className={styles.projectList}>
           <Project
             title="vst.js"

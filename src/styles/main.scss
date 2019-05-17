@@ -145,11 +145,6 @@ hr {
   border-right: none;
 }
 
-p {
-  font-family: var(--primary-font-family);
-  line-height: var(--body-line-height);
-}
-
 a {
   @include link-theme("dark");
   font-family: var(--primary-font-family);

@@ -19,10 +19,6 @@
 }
 
 .h2,
-.p {
-  @include text-theme("light");
-}
-
 .h2 {
   @include fancy-underline(var(--color-primary));
 }
