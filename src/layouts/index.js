@@ -8,7 +8,7 @@
 import React, { useState } from "react"
 import { Waypoint } from "react-waypoint"
 import PropTypes from "prop-types"
-import { Nav, FloatingNav } from "../components/Nav"
+import { FloatingNav } from "../components/Nav"
 import { ToastContainer } from "react-toastify"
 import { X } from "react-feather"
 
@@ -28,13 +28,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <div id="about-me">
-        <div className="head-section">
+        <div>
           <ToastContainer
             className="toast-container"
             closeButton={<CloseToastButton />}
             autoClose={3000}
           />
-          <Nav />
           <FloatingNav visible={showFloatingNav} />
           <Waypoint
             onEnter={() => setShowFloatingNav(false)}

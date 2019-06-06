@@ -1,15 +1,16 @@
 import React from "react"
 import styles from "./SpeakingItem.module.scss"
-import { P } from "../../atoms/Typography"
+import { Span, P, H3, H4 } from "../../atoms/Typography"
+import Anchor from "../../atoms/Anchor"
 
 export default () => {
   return (
     <div className={styles.container}>
-      <h3>
-        LibertyJS <span>OCT 2018</span>
-      </h3>
-      <h4>Embracing the Native of React Native</h4>
-      <P>
+      <H3 theme="dark">
+        LibertyJS <Span className={styles.span}>OCT 2018</Span>
+      </H3>
+      <H4 theme="dark">Embracing the Native of React Native</H4>
+      <P theme="dark">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -18,8 +19,8 @@ export default () => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </P>
-      <a href="https://google.com">Slides</a>
-      <a href="https://google.com">Website</a>
+      <Anchor href="https://google.com">Slides</Anchor>
+      <Anchor href="https://google.com">Website</Anchor>
     </div>
   )
 }

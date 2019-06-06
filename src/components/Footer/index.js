@@ -2,6 +2,7 @@ import React from "react"
 import styles from "./Footer.module.scss"
 import { Button } from "../atoms/Button"
 import SocialIcon from "../atoms/SocialIcon"
+import Anchor from "../atoms/Anchor"
 import config from "../../config"
 
 export default ({ showContactForm }) => (
@@ -18,20 +19,35 @@ export default ({ showContactForm }) => (
         </Button>
       </div>
       <div className={styles.right}>
-        <a className={styles.socialSection} href={config.twitterUrl}>
+        <Anchor
+          aria-label="twitter"
+          className={styles.socialSection}
+          href={config.twitterUrl}
+          theme="dark"
+        >
           <SocialIcon type="twitter" size="sm" className={styles.socialIcon} />
           <div className={styles.socialLink}>@daveramirez</div>
-        </a>
+        </Anchor>
         <div className={styles.separator} />
-        <a className={styles.socialSection} href={config.githubUrl}>
+        <Anchor
+          aria-label="github"
+          className={styles.socialSection}
+          href={config.githubUrl}
+          theme="dark"
+        >
           <SocialIcon type="github" size="sm" className={styles.socialIcon} />
           <div className={styles.socialLink}>/ramirezd42</div>
-        </a>
+        </Anchor>
         <div className={styles.separator} />
-        <a className={styles.socialSection} href={config.linkedInUrl}>
+        <Anchor
+          aria-label="linkedIn"
+          className={styles.socialSection}
+          href={config.linkedInUrl}
+          theme="dark"
+        >
           <SocialIcon className={styles.socialIcon} size="sm" type="linkedIn" />
           <div className={styles.socialLink}>/dave-ramirez</div>
-        </a>
+        </Anchor>
       </div>
     </div>
   </footer>

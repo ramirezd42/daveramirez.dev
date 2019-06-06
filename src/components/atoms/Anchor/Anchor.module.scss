@@ -1,0 +1,11 @@
+@import "src/styles/theme";
+
+.container {
+  font-family: var(--primary-font-family);
+  text-decoration: none;
+  @include link-theme("light");
+
+  &.dark {
+    @include link-theme("dark");
+  }
+}

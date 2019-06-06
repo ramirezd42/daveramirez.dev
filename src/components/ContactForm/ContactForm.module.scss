@@ -8,18 +8,23 @@
   form {
     display: flex;
     flex-direction: column;
+    padding-bottom: var(--space-md);
   }
 
   label {
     font-weight: bold;
     font-family: var(--primary-font-family);
     margin-bottom: var(--space-xs);
+    color: var(--color-dark-gray);
+    text-transform: uppercase;
+    font-size: var(--text-xs);
   }
 
   input:not([type="submit"]):not([type="file"]),
   textarea {
     padding: var(--space-xs);
     font-family: var(--primary-font-family);
+    font-size: var(--text-sm);
     margin-bottom: var(--space-md);
     border-radius: var(--border-radius);
     border: 1px solid var(--color-light-gray);
@@ -29,13 +34,8 @@
     height: 200px;
   }
 
-  .submit {
-    margin-bottom: var(--space-md);
-  }
-
   .loadingIndicator {
     height: calc(var(--text-base-size) + (var(--space-sm) * 2));
-    margin-bottom: var(--space-md);
     width: 100%;
     display: flex;
     justify-content: center;

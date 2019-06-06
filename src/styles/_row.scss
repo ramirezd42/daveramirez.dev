@@ -2,8 +2,8 @@
 
 @mixin row {
   width: 100%;
-  max-width: var(--container-width);
   display: flex;
+  max-width: var(--container-width);
   margin-bottom: var(--space-lg);
   padding-left: var(--space-md);
   padding-right: var(--space-md);

@@ -1,23 +1,29 @@
 import React from "react"
-import { Link } from "react-scroll"
 import UserIcon from "react-feather/dist/icons/user"
 import CodeIcon from "react-feather/dist/icons/code"
 import MicIcon from "react-feather/dist/icons/mic"
 import styles from "./Nav.module.scss"
+import { ScrollAnchor } from "../atoms/Anchor"
 
-const NavLink = props => (
-  <Link className={styles.link} smooth duration="400" {...props} />
+const NavLink = ({ to, ...restProps }) => (
+  <ScrollAnchor
+    smooth
+    duration="400"
+    to={to}
+    className={styles.link}
+    {...restProps}
+  />
 )
 
-const Links = () => (
+const Links = ({ theme }) => (
   <>
-    <NavLink to="about-me">
+    <NavLink to="about-me" theme={theme}>
       <UserIcon className={styles.icon} /> About Me
     </NavLink>
-    <NavLink to="projects">
+    <NavLink to="projects" theme={theme}>
       <CodeIcon className={styles.icon} /> Projects
     </NavLink>
-    <NavLink to="speaking">
+    <NavLink to="speaking" theme={theme}>
       <MicIcon className={styles.icon} /> Speaking
     </NavLink>
   </>
@@ -25,7 +31,7 @@ const Links = () => (
 
 export const Nav = props => (
   <div className={styles.container} {...props}>
-    <Links />
+    <Links theme="dark" />
   </div>
 )
 
@@ -35,7 +41,7 @@ export const FloatingNav = ({ visible, ...restProps }) => {
   }`
   return (
     <div className={className} {...restProps}>
-      <Links />
+      <Links theme="light" />
     </div>
   )
 }

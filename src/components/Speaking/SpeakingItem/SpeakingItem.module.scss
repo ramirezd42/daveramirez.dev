@@ -7,9 +7,6 @@
   width: 100%;
 
   margin-bottom: var(--space-lg);
-  h3 {
-    @include text-theme("dark");
-  }
 
   a {
     @include text-theme("dark");

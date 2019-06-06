@@ -1,15 +1,15 @@
 import React from "react"
 import styles from "./Projects.module.scss"
-import Project from "../Project"
+import Project from "./Project"
 import vstJsLogo from "../../images/vstjs-logo.png"
 import nodeAudioLogo from "../../images/node-audio-logo.png"
-import { P } from "../atoms/Typography"
+import { P, H2 } from "../atoms/Typography"
 
 export default () => {
   return (
     <div className={styles.container} id="projects">
       <div className={styles.row}>
-        <h2 className={styles.h2}>Projects</h2>
+        <H2 underline>Projects</H2>
         <P className={styles.p}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

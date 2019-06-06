@@ -5,8 +5,8 @@ import styles from "./ContactForm.module.scss"
 import loadingImage from "../../images/loading.svg"
 import AlertCircle from "react-feather/dist/icons/alert-circle"
 import Modal from "../atoms/Modal"
-import { P } from "../atoms/Typography"
-import { Submit } from "../Button"
+import { P, H3 } from "../atoms/Typography"
+import { Submit } from "../atoms/Button"
 
 const honeyPotField = "realFieldPlzUse"
 
@@ -75,7 +75,7 @@ export default class ContactForm extends React.Component {
     return (
       <Modal isOpen={visible} onClose={hideContactForm}>
         <div className={styles.container}>
-          <h3>Contact Me</h3>
+          <H3>Contact Me</H3>
           <form
             onSubmit={e => this.submit(e, hideContactForm)}
             name="contact"
@@ -126,7 +126,6 @@ export default class ContactForm extends React.Component {
                 block
                 theme="light"
                 disabled={isLoading || !isValid(formData)}
-                className={styles.submit}
               />
             )}
           </form>

@@ -1,7 +1,6 @@
 @import "src/styles/breakpoints";
 @import "src/styles/row";
 @import "src/styles/theme";
-@import "src/styles/fancy_underline";
 
 .container {
   width: 100%;
@@ -16,11 +15,6 @@
   @include row;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.h2,
-.h2 {
-  @include fancy-underline(var(--color-primary));
 }
 
 .p {

@@ -1,15 +1,11 @@
 @import "src/styles/breakpoints";
 @import "src/styles/row";
 @import "src/styles/theme";
-@import "src/styles/fancy_underline";
-
-.section {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
 
 .container {
+  background: var(--brand-gradient);
+}
+.hero {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -30,13 +26,9 @@
   }
 }
 
-.h1:after,
-.h2:after {
-  content: none;
-}
-
-.h1 {
-  @include text-theme("dark");
+.heading {
+  color: var(--color-white);
+  font-family: var(--primary-font-family);
   font-size: calc(
     var(--text-xxl) * var(--text-scale-ratio) * var(--text-scale-ratio) *
       var(--text-scale-ratio)
@@ -46,11 +38,14 @@
   text-transform: none;
 }
 
-.h2 {
-  @include text-theme("dark");
-  font-size: calc(var(--text-xxl) * var(--text-scale-ratio));
-  font-weight: lighter;
+.subheading {
   margin: 0;
+  color: var(--color-white);
+  font-family: var(--primary-font-family);
+  font-weight: lighter;
+  line-height: var(--heading-line-height);
+  font-size: calc(var(--text-xxl) * var(--text-scale-ratio));
+  text-transform: uppercase;
 }
 
 .hr {
@@ -87,16 +82,6 @@
   }
   @include for-tablet-landscape-up {
     margin-bottom: 0px;
-  }
-}
-
-.aboutMe {
-  h2 {
-    @include fancy-underline(var(--color-white));
-  }
-  h2,
-  p {
-    @include text-theme("dark");
   }
 }
 
