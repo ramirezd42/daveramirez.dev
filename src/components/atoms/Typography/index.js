@@ -1,6 +1,8 @@
 import React from "react"
 import styles from "./Typography.module.scss"
 
+/* eslint-disable jsx-a11y/heading-has-content */
+
 export const Span = ({ className, theme, ...restProps }) => (
   <span
     className={`${styles.span} ${styles[theme]} ${className}`}
