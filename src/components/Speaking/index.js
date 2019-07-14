@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./Speaking.module.scss"
 import SpeakingItem from "./SpeakingItem"
-import { P, H2 } from "../atoms/Typography"
+import { H2 } from "../atoms/Typography"
 
 export default () => (
   <div className={styles.container} id="speaking">
