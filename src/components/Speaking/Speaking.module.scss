@@ -1,0 +1,39 @@
+@import "src/styles/breakpoints";
+@import "src/styles/row";
+
+.container {
+  width: 100%;
+  background: var(--brand-gradient);
+  padding-top: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.h2 {
+  position: relative;
+}
+
+.span {
+  margin-left: var(--space-xxs);
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.row {
+  @include row;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.item {
+  height: 300px;
+  width: 50%;
+  padding: var(--space-md);
+}

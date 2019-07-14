@@ -1,0 +1,87 @@
+.span,
+.p,
+.h1,
+.h2,
+.h3,
+.h4 {
+  color: var(--color-black);
+  &.dark {
+    color: var(--color-white);
+  }
+}
+
+.p {
+  font-family: var(--primary-font-family);
+  line-height: var(--body-line-height);
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  margin-bottom: var(--space-xxs);
+  line-height: var(--heading-line-height);
+}
+
+.h3,
+.h4 {
+  margin-bottom: var(--space-sm);
+}
+
+.h1,
+.h2 {
+  position: relative;
+}
+
+.h1 {
+  font-family: var(--primary-font-family);
+  font-weight: normal;
+  font-size: var(--text-xxl);
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-family: var(--primary-font-family);
+  font-weight: normal;
+  font-size: var(--text-xl);
+  text-transform: uppercase;
+}
+
+.h3 {
+  font-family: var(--secondary-font-family);
+  font-weight: bold;
+  font-size: var(--text-lg);
+}
+
+.h4 {
+  font-family: var(--secondary-font-family);
+  font-size: var(--text-md);
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.fancyUnderline {
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0px;
+    width: 300px;
+    height: 1px;
+    background: var(--color-primary);
+  }
+  &.dark:after {
+    background: var(--color-white);
+  }
+}
+
+.hr {
+  height: 0px;
+  border-top: 1px solid var(--color-white);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  &.dark {
+    border-color: var(--color-white);
+  }
+}

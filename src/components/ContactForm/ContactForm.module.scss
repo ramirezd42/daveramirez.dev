@@ -1,0 +1,64 @@
+@import "src/styles/breakpoints";
+
+.container {
+  h3 {
+    margin-top: 0px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: var(--space-md);
+  }
+
+  label {
+    font-weight: bold;
+    font-family: var(--primary-font-family);
+    margin-bottom: var(--space-xs);
+    color: var(--color-dark-gray);
+    text-transform: uppercase;
+    font-size: var(--text-xs);
+  }
+
+  input:not([type="submit"]):not([type="file"]),
+  textarea {
+    padding: var(--space-xs);
+    font-family: var(--primary-font-family);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-md);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-light-gray);
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  .loadingIndicator {
+    height: calc(var(--text-base-size) + (var(--space-sm) * 2));
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 10px;
+    }
+  }
+
+  .errorMessage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+    svg {
+      color: var(--color-red);
+    }
+    p {
+      color: var(--color-red);
+      margin: 0px var(--space-xs);
+      font-weight: bold;
+      font-size: var(--text-sm);
+    }
+  }
+}

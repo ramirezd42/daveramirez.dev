@@ -1,0 +1,18 @@
+@import "src/styles/theme";
+
+.container {
+  @include text-theme("dark");
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: var(--space-xxs);
+  border: 2px solid var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sm {
+  width: 32px;
+  height: 32px;
+}
