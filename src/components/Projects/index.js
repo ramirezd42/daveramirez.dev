@@ -9,15 +9,11 @@ export default () => {
   return (
     <div className={styles.container} id="projects">
       <div className={styles.row}>
-        <H2 underline>Projects</H2>
+        <H2 underline>Pet Projects</H2>
         <P className={styles.p}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          In addition to my day job, I also enjoy experimenting with technology
+          in areas that interest me. As an amateur musician I find audio
+          technology to be a particularly fun space to play around in.
         </P>
         <div className={styles.projectList}>
           <Project
@@ -25,20 +21,23 @@ export default () => {
             logoSrc={vstJsLogo}
             projectLink="https://github.com/ramirezd42/vst-js"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            vst.js was an experiment in enabling NodeJS applications to interact
+            with native audio plugin formats such as VST, VST3 and AudioUnit.
+            This began as a reseach project since I wasn't very familiar with
+            C++ or audio plugin SDKs initially but I was able to stand up a
+            working prototype.
           </Project>
           <Project
             title="node-audio"
             logoSrc={nodeAudioLogo}
             projectLink="https://github.com/ramirezd42/node-audio"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            The goal of node-audio was to create an api compatable version of
+            the Web Audio API as a NodeJS package that could be extended with
+            additional AudioNode implemented in C++. The library contains an
+            example of one such node called the "PluginNode" that makes use of
+            vst-js to allow developers to connect audio plugins to an audio
+            graph.
           </Project>
         </div>
       </div>
