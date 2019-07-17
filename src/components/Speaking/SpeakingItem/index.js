@@ -14,14 +14,27 @@ export default ({
 }) => {
   return (
     <div className={styles.container}>
-      <H3 theme="dark">
-        {name} <Span className={styles.span}>{date}</Span>
+      <H3 theme="dark" className={styles.heading}>
+        <Span theme="dark">{name}</Span>
+        <Span className={styles.date}>{date}</Span>
       </H3>
       <H4 theme="dark">{title}</H4>
       <P theme="dark">{children}</P>
-      {videoLink && <Anchor href={videoLink}>Watch</Anchor>}
-      {slideLink && <Anchor href={slideLink}>Slides</Anchor>}
-      {websiteLink && <Anchor href={websiteLink}>Website</Anchor>}
+      {videoLink && (
+        <Anchor href={videoLink} underline>
+          Watch
+        </Anchor>
+      )}
+      {slideLink && (
+        <Anchor href={slideLink} underline>
+          Slides
+        </Anchor>
+      )}
+      {websiteLink && (
+        <Anchor href={websiteLink} underline>
+          Website
+        </Anchor>
+      )}
     </div>
   )
 }

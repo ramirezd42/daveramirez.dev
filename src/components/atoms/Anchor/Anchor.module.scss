@@ -2,10 +2,15 @@
 
 .container {
   font-family: var(--primary-font-family);
-  text-decoration: none;
   @include link-theme("light");
 
   &.dark {
     @include link-theme("dark");
+  }
+
+  text-decoration: none;
+
+  &.underline {
+    text-decoration: underline;
   }
 }
