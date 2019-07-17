@@ -1,10 +1,11 @@
 import React from "react"
 import styles from "./Project.module.scss"
 import { P, H3 } from "../../atoms/Typography"
+import Anchor from "../../atoms/Anchor"
 
 export default ({ title, children, logoSrc, projectLink }) => {
   return (
-    <a className={styles.container} href={projectLink}>
+    <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles.logoContainer}>
           <img
@@ -16,6 +17,9 @@ export default ({ title, children, logoSrc, projectLink }) => {
         <H3>{title}</H3>
       </div>
       <P>{children}</P>
-    </a>
+      <Anchor href={projectLink} underline>
+        GitHub
+      </Anchor>
+    </div>
   )
 }

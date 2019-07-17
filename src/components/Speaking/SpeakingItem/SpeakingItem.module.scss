@@ -11,11 +11,20 @@
   a {
     @include text-theme("dark");
     @include link-theme("dark");
-    text-decoration: underline;
     margin-right: var(--space-sm);
   }
 
-  span {
+  .heading {
+    display: flex;
+    @include for-phone-only {
+      flex-direction: column;
+    }
+    & > * {
+      margin-right: var(--space-xs);
+    }
+  }
+
+  .date {
     text-transform: uppercase;
   }
 }

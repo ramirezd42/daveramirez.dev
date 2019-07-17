@@ -2,14 +2,12 @@ import React from "react"
 import styles from "./Button.module.scss"
 
 const createButton = (Container, containerProps = {}) => ({
-  onClick,
   children,
   size,
   theme,
   block,
   className,
-  disabled,
-  value,
+  ...restProps
 }) => {
   const classNames = `
     ${styles.button}
@@ -20,17 +18,12 @@ const createButton = (Container, containerProps = {}) => ({
   `
 
   return (
-    <Container
-      {...containerProps}
-      onClick={onClick}
-      className={classNames}
-      disabled={disabled}
-      value={value}
-    >
+    <Container {...containerProps} {...restProps} className={classNames}>
       {children}
     </Container>
   )
 }
 
 export const Button = createButton(`button`)
+export const AnchorButton = createButton(`a`)
 export const Submit = createButton(`input`, { type: "submit" })
